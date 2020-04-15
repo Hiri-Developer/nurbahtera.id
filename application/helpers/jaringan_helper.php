@@ -15,4 +15,3 @@ function checkMember($memberId)
 	$CI=& get_instance();
 	return $CI->db->get_where('members',['upline' => $memberId])->num_rows();
 }
-?>

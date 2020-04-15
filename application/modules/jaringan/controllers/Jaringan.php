@@ -20,7 +20,7 @@ class Jaringan extends MX_Controller
 			$query = $this->db->get('members')->result();
 		}
 		$data['members'] = json_encode($query);
-		$this->load->view('jaringan', $data);
+		$this->template->utama('jaringan', $data);
 	}
 
 	public function member()
