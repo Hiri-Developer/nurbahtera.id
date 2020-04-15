@@ -15,6 +15,8 @@ class Template
 		 * variabel diatas ^ nantinya akan dikirim ke file views/template/index.php
 		 * */
         $data['headernya'] = $this->_ci->load->view('template/header', $data, TRUE);
+        $data['navbar'] = $this->_ci->load->view('template/navbar', $data, TRUE);
+        $data['sidebar'] = $this->_ci->load->view('template/sidebar', $data, TRUE);
         $data['contentnya'] = $this->_ci->load->view($content, $data, TRUE);
         $data['footernya'] = $this->_ci->load->view('template/footer', $data, TRUE);
 
