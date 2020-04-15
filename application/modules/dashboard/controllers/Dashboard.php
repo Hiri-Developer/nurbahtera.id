@@ -7,14 +7,14 @@ class Dashboard extends MY_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('login') != TRUE) {
+		// if ($this->session->userdata('login') != TRUE) {
 
-			redirect('auth', 'refresh');
-		}
+		// 	redirect('auth', 'refresh');
+		// }
 	}
 
 	public function index()
 	{
-		$this->load->view('dashboard');
+		$this->template->utama('dashboard');
 	}
 }
