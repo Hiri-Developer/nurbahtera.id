@@ -10,13 +10,16 @@
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="<?= base_url('assets/plugins/fontawesome-free/css/all.css') ?>">
+	<!-- datatables -->
+	<link rel="stylesheet" href="<?= base_url('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css') ?>">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="<?= base_url('assets/dist/css/adminlte.css') ?>">
 	<!-- Google Font: Source Sans Pro -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
 </head>
 
-<body class="hold-transition sidebar-mini">
+<!-- <body class="hold-transition sidebar-mini"> -->
+<body class="sidebar-mini control-sidebar-slide-open text-sm">
 	<div class="wrapper">
 		<nav class="main-header navbar navbar-expand navbar-dark navbar-light">
 			<!-- Left navbar links -->
@@ -51,7 +54,7 @@
 			<!-- Brand Logo -->
 			<a href="../../index3.html" class="brand-link text-center">
 				<!-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-				<span class="brand-text text-center font-weight-light">AdminLTE 3</span>
+				<span class="brand-text text-center font-weight-light">PT. NGS</span>
 			</a>
 
 			<!-- Sidebar -->
@@ -70,8 +73,24 @@
 				<nav class="mt-2">
 					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 						<!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
-						<li class="nav-item has-treeview menu-open">
-							<a href="#" class="nav-link active">
+						<li class="nav-item">
+				            <a href="<?= base_url() ?>" class="nav-link active">
+							<i class="nav-icon fas fa-tachometer-alt"></i>
+				              <p>
+				                Dashboard
+				              </p>
+				            </a>
+				         </li>
+						<li class="nav-item">
+				            <a href="<?= base_url('members') ?>" class="nav-link">
+							<i class="nav-icon fas fa-users"></i>
+				              <p>
+				                Members
+				              </p>
+				            </a>
+				         </li>
+						<li class="nav-item has-treeview">
+							<a href="#" class="nav-link">
 								<i class="nav-icon fas fa-tachometer-alt"></i>
 								<p>
 									Dashboard
@@ -80,7 +99,7 @@
 							</a>
 							<ul class="nav nav-treeview ">
 								<li class="nav-item">
-									<a href="../../index.html" class="nav-link navbar-dark active">
+									<a href="../../index.html" class="nav-link navbar-dark">
 										<i class="far fa-circle nav-icon"></i>
 										<p>Dashboard v1</p>
 									</a>
