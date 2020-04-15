@@ -57,56 +57,57 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</span>
 					<ul>
 						<!-- == START LEVEL 1 == -->
-						<?php if (checkMember($master[$l0]['upline']) != 0) : ?>
-							<?php $lvl1 = json_decode(members($master[$l0]['upline']), TRUE);
+						<?php if (checkMember($master[$l0]['username']) != 0) : ?>
+							<?php $lvl1 = json_decode(members($master[$l0]['username']), TRUE);
+						// var_dump($lvl1);
 							foreach ($lvl1 as $l1 => $vl1) : ?>
 								<li>
 									<!-- level 1 -->
 									<span class="tf-nc">
 										<img src="<?= base_url('assets/img/favicon.png') ?>" width="50">
 										<!-- <p class="NetworkAddNewLevel">LEVEL 1</p> -->
-										<p class="NetworkLabelId"><?= $lvl1[$l1]['upline'] ?></p>
+										<p class="NetworkLabelId"><?= $lvl1[$l1]['username'] ?></p>
 										<p class="NetworkLabelName"><?= $lvl1[$l1]['name'] ?></p>
 									</span>
 
 									<ul>
 										<!-- START LEVEL 2 -->
 										<?php if (checkMember($lvl1[$l1]['upline']) != 0) : ?>
-											<?php $lvl2 = json_decode(members($lvl1[$l1]['upline']), TRUE);
+											<?php $lvl2 = json_decode(members($lvl1[$l1]['username']), TRUE);
 											foreach ($lvl2 as $l2 => $vl2) : ?>
 												<li>
 													<span class="tf-nc">
 														<img src="<?= base_url('assets/img/favicon.png') ?>" width="50">
 														<!-- <p class="NetworkAddNewLevel">LEVEL 2</p> -->
-														<p class="NetworkLabelId"><?= $lvl2[$l2]['upline'] ?></p>
+														<p class="NetworkLabelId"><?= $lvl2[$l2]['username'] ?></p>
 														<p class="NetworkLabelName"><?= $lvl2[$l2]['name'] ?></p>
 													</span>
 													<ul>
 														<!-- START LEVEL 3  -->
 														<?php if (checkMember($lvl2[$l2]['upline']) != 0) : ?>
-															<?php $lvl3 = json_decode(members($lvl2[$l2]['upline']), TRUE);
+															<?php $lvl3 = json_decode(members($lvl2[$l2]['username']), TRUE);
 															foreach ($lvl3 as $l3 => $vl3) : ?>
 																<li>
 																	<span class="tf-nc">
 																		<img src="<?= base_url('assets/img/favicon.png') ?>" width="50">
-																		<p class="NetworkLabelId"><?= $lvl3[$l3]['upline'] ?></p>
+																		<p class="NetworkLabelId"><?= $lvl3[$l3]['username'] ?></p>
 																		<p class="NetworkLabelName"><?= $lvl3[$l3]['name'] ?></p>
 																	</span>
 																	<ul>
 																		<!-- START LEVEL 4  -->
 																		<?php if (checkMember($lvl3[$l3]['upline']) != 0) : ?>
-																			<?php $lvl4 = json_decode(members($lvl3[$l3]['upline']), TRUE);
+																			<?php $lvl4 = json_decode(members($lvl3[$l3]['username']), TRUE);
 																			foreach ($lvl4 as $l4 => $vl4) : ?>
 																				<li>
 																					<span class="tf-nc">
 																						<img src="<?= base_url('assets/img/favicon.png') ?>" width="50">
-																						<p class="NetworkLabelId"><?= $lvl4[$l4]['upline'] ?></p>
+																						<p class="NetworkLabelId"><?= $lvl4[$l4]['username'] ?></p>
 																						<p class="NetworkLabelName"><?= $lvl4[$l4]['name'] ?></p>
 																					</span>
 																					<ul>
 																						<!-- START LEVEL 4  -->
 																						<?php if (checkMember($lvl4[$l4]['upline']) != 0) : ?>
-																							<?php $lvl5 = json_decode(members($lvl4[$l4]['upline']), TRUE);
+																							<?php $lvl5 = json_decode(members($lvl4[$l4]['username']), TRUE);
 																							foreach ($lvl5 as $l5 => $vl5) : ?>
 																								<li>
 																									<span class="tf-nc">
